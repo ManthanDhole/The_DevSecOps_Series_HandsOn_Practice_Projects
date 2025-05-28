@@ -97,6 +97,9 @@ chmod +x ./gradlew
 # Build the application
 ./gradlew build
 
+# If the application fails to build due to incomplete test cases, use the following command, which excludes test task
+./gradlew build -x test
+
 # Run the application
 ./gradlew bootRun
 ```
@@ -111,8 +114,8 @@ If you encounter SSL issues on Apple Silicon:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/vulnerable-spring-app.git
-cd vulnerable-spring-app
+git clone https://github.com/ManthanDhole/The_DevSecOps_Series_HandsOn_Practice_Projects.git
+cd ./SAST/vulnerable-application
 ```
 
 ### Build and Run
@@ -122,6 +125,9 @@ chmod +x ./gradlew
 
 # Build the application
 ./gradlew build
+
+# If the application fails to build due to incomplete test cases, use the following command, which excludes test task
+./gradlew build -x test
 
 # Run the application
 ./gradlew bootRun
@@ -137,8 +143,8 @@ If you're running on a system with limited memory:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/vulnerable-spring-app.git
-cd vulnerable-spring-app
+git clone https://github.com/ManthanDhole/The_DevSecOps_Series_HandsOn_Practice_Projects.git
+cd ./SAST/vulnerable-application
 ```
 
 ### Build and Run
@@ -154,7 +160,8 @@ gradlew.bat bootRun
 If you encounter line ending issues:
 ```bash
 git config --global core.autocrlf true
-git clone https://github.com/yourusername/vulnerable-spring-app.git
+git clone https://github.com/ManthanDhole/The_DevSecOps_Series_HandsOn_Practice_Projects.git
+cd ./SAST/vulnerable-application
 ```
 
 ## Docker Setup
