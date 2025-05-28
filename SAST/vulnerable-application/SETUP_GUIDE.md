@@ -85,8 +85,8 @@ Download and install [Docker Desktop](https://www.docker.com/products/docker-des
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/vulnerable-spring-app.git
-cd vulnerable-spring-app
+git clone https://github.com/ManthanDhole/The_DevSecOps_Series_HandsOn_Practice_Projects.git
+cd ./SAST/vulnerable-application
 ```
 
 ### Build and Run
