@@ -208,7 +208,7 @@ docker-compose up sonarqube
    ```groovy
    sonarqube {
        properties {
-           property 'sonar.login', 'your-generated-token'
+           property 'sonar.token', 'your-generated-token'
        }
    }
    ```
@@ -216,10 +216,14 @@ docker-compose up sonarqube
 ### Running Analysis
 ```bash
 # On macOS/Linux
-./gradlew sonarqube
+./gradlew build -x test
+# Run the JaCoCo Test Report for generating Coverage Report
+./gradlew jacocoTestReport -x test
+# Run the sonar command to upload files to sonarqube server
+./gradlew sonar
 
 # On Windows
-gradlew.bat sonarqube
+gradlew.bat sonar
 ```
 
 ## Troubleshooting
