@@ -4,6 +4,7 @@ plugins {
     id 'java'
     id 'jacoco'
     id 'org.sonarqube' version '4.0.0.2929'
+    id 'org.owasp.dependencycheck' version '8.4.0'
 }
 
 group = 'com.example'
@@ -61,6 +62,19 @@ sonarqube {
         property 'sonar.java.binaries', 'build/classes'
         property 'sonar.java.coveragePlugin', 'jacoco'
         property 'sonar.coverage.jacoco.xmlReportPaths', 'build/reports/jacoco/test/jacocoTestReport.xml'
-        property 'sonar.login', 'squ_73e293c0629f1e4df846fb1c34bf9ac4b5054ae4'
+    }
+}
+
+dependencyCheck {
+    // Configuration options
+    failBuildOnCVSS = 7  // Fail the build for CVSS scores >= 7
+    formats = ['HTML', 'JSON', 'CSV', 'XML']  // Report formats
+    outputDirectory = "${buildDir}/reports/dependency-check"
+    scanConfigurations = ['runtimeClasspath', 'compileClasspath']
+    
+    // Analyzer configuration
+    analyzers {
+        assemblyEnabled = false
+        nodeEnabled = false  // Disable Node.js analyzer if not needed
     }
 }
