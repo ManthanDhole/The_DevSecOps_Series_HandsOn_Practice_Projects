@@ -25,6 +25,10 @@ Unzip the downloaded file and store in location of your choice
 ```
 unzip -d /opt/dependency-check/ dependency-check-12.1.0-release.zip
 ```
+[Dependency Check GitHub Repo](https://github.com/dependency-check/DependencyCheck?tab=readme-ov-file)
+Request an NVD API Key: [Click here](https://nvd.nist.gov/developers/request-an-api-key)
+Enter your Email Address and Organization Info (NA if not applicable)
+In response you'll be getting an email with the API key which is used to connect with NVD Database and fetch the updates.
 
 2. Add the path to the dependency-check.sh file to `.~/bashrc` as alias
 
