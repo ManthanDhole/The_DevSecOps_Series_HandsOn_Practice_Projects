@@ -17,7 +17,37 @@ This guide demonstrates how to use OWASP Dependency Check to scan Java Gradle pr
 - Internet connection (for NVD database updates)
 - Your Java Gradle project with a built JAR file
 
-## Setting Up Dependency Check with Gradle
+## Method 1: OWASP Dependency-Check CLI Tool
+1. Navigate to the official [OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/) page and download the [CLI Tool](https://github.com/dependency-check/DependencyCheck/releases/download/v12.1.0/dependency-check-12.1.0-release.zip)
+
+Unzip the downloaded file and store in location of your choice
+
+```
+unzip -d /opt/dependency-check/ dependency-check-12.1.0-release.zip
+```
+
+2. Add the path to the dependency-check.sh file to `.~/bashrc` as alias
+
+```
+alias dependency-check='sh /opt/dependency-check/bin/dependency-check.sh'
+```
+
+3. Navigate to the folder where the jar/executable file is available in the project folder 
+
+```
+cd ./SCA/vulnerable-application/build/libs
+ls
+
+vulnerable-application-0.0.1-SNAPSHOT-plain.jar  vulnerable-application-0.0.1-SNAPSHOT.jar
+```
+4. Execute the following command to scan the JAR file for SCA Findings
+
+```
+dependency-check --scan vulnerable-application-0.0.1-SNAPSHOT.jar --format HTML --nvdApiKey <your-api-key>
+```
+This would create the scan results in an HTML format and you can review the findings by opening it in a web browser.
+
+## Method 2: Setting Up Dependency Check with Gradle
 
 1. Add the Dependency Check plugin to your `build.gradle` file:
 
