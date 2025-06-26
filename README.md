@@ -1,6 +1,6 @@
 # The_DevSecOps_Series_HandsOn_Practice_Projects
 This repo consist of sample projects and guide that you can use to practice DevSecOps Tool integrations. <br>
-All the tutorials are available in playlist [The_DevSecOps_Series](https://www.youtube.com/playlist?list=PLrhqqWtUP2FHITAa1f_wUQvqjAW-ikima)
+All the tutorials are available in playlist, links provided below:
 
 ### Access the DevSecOps Playlist & Repo
 [The DevSecOps Series Playlist](https://www.youtube.com/playlist?list=PLrhqqWtUP2FHITAa1f_wUQvqjAW-ikima) <br>
